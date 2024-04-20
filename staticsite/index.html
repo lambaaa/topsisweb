@@ -90,8 +90,8 @@
             <input type="text" id="middle-label" placeholder="One fish two fish">
           </div>
         </div>
-
-        <a href="#" class="button large expanded">Buy Now</a>
+        
+        <button onclick="runExample()" class="button large expanded">Run Python Script</button>
 
         <div class="small secondary expanded button-group">
             <a class="button">Facebook</a>
@@ -104,44 +104,29 @@
     <div class="column row">
       <hr>
       <ul class="tabs" data-tabs id="example-tabs">
-        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
-        <li class="tabs-title"><a href="#panel2">Similar Products</a></li>
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab1</a></li>
+        <li class="tabs-title"><a href="#panel2">Tab2</a></li>
       </ul>
       <div class="tabs-content" data-tabs-content="example-tabs">
         <div class="tabs-panel is-active" id="panel1">
-          <h4>Reviews</h4>
-          <div class="media-object stack-for-small">
-            <div class="media-object-section">
-              <img class="thumbnail" src="https://placehold.it/200x200">
-            </div>
-            <div class="media-object-section">
-              <h5>Mike Stevenson</h5>
-              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
-            </div>
-          </div>
-          <div class="media-object stack-for-small">
-            <div class="media-object-section">
-              <img class="thumbnail" src="https://placehold.it/200x200">
-            </div>
-            <div class="media-object-section">
-              <h5>Mike Stevenson</h5>
-              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
-            </div>
-          </div>
-          <div class="media-object stack-for-small">
-            <div class="media-object-section">
-              <img class="thumbnail" src="https://placehold.it/200x200">
-            </div>
-            <div class="media-object-section">
-              <h5>Mike Stevenson</h5>
-              <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
-            </div>
-          </div>
-          <label>
-            My Review
-            <textarea placeholder="None"></textarea>
-          </label>
-          <button class="button">Submit Review</button>
+          <h4>Sonuç</h4>
+          <table>
+            <tr>
+              <th>Person 1</th>
+              <th>Person 2</th>
+              <th>Person 3</th>
+            </tr>
+            <tr>
+              <td>Emil</td>
+              <td>Tobias</td>
+              <td>Linus</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>14</td>
+              <td>10</td>
+            </tr>
+          </table>
         </div>
         <div class="tabs-panel" id="panel2">
           <div class="row medium-up-3 large-up-5">
@@ -192,7 +177,14 @@
     </div>
 
 
-
+    <script>
+      function runExample() {
+        // Get the path to the Python script.
+        var pythonScriptPath = "example.py";
+        // Run the Python script.
+        subprocess.run(["python", pythonScriptPath]);
+      }
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
